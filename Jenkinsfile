@@ -1,7 +1,7 @@
 pipeline {
 	agent {label 'sandbox'}
 	stages {
-		stage('Stage1') {
+		stage('Clone Application Repo') {
 			steps {
 				echo "Jayesh - stage1"
 			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
@@ -9,12 +9,12 @@ pipeline {
 				echo "build URL is ${env.BUILD_URL}"
 			}
 		} 
-		stage('Stage2') {
+		stage('Clone zAppbuild') {
 			steps {
 				echo "Jayesh - clone zAppbuild here"
 			}
 		}
-		stage('Stage3') {
+		stage('Execute Impact Build') {
 			steps {
 				echo "Jayesh - Execute build here"
 			}
