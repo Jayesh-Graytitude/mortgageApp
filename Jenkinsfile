@@ -11,12 +11,12 @@ pipeline {
 		} 
 		stage('Stage2') {
 			steps {
-				echo "Jayesh - stage2"
+				echo "Jayesh - clone zAppbuild here"
 			}
 		}
 		stage('Stage3') {
 			steps {
-				echo "Jayesh - stage3"
+				echo "Jayesh - Execute build here"
 			}
 		}
 	}
