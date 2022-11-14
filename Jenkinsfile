@@ -22,7 +22,7 @@ pipeline {
 		}
 		stage('Execute Impact Build') {
 			steps {
-				echo "Jayesh - Execute build here"
+				echo "Jayesh - Execute build here now"
 				sh '''
 					export | tee
 					export DBB_HOME=/usr/lpp/IBM/dbb
