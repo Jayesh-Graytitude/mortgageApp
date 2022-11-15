@@ -25,7 +25,7 @@ pipeline {
 				echo "Jayesh - Execute build here now"
 				sh '''
 					export | tee
-					export DBB_HOME=/usr/lpp/IBM/dbb
+//					export DBB_HOME=/usr/lpp/IBM/dbb
 					/usr/lpp/IBM/dbb/bin/groovyz -DBB_PERSONAL_DAEMON /u/jayesh-zappbuild-sandbox/dbb-zappbuild/sandbox/zAppbuild/build.groovy --workspace /u/jayesh-zappbuild-sandbox/Application --application mortgageApp --outDir /u/jayesh-zappbuild-sandbox/out --hlq ADCDMST.DBB --verbose mortgageApp/cobol/epsmpmt.cbl
 				'''	
 			}
