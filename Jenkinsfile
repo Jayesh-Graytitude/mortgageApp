@@ -10,8 +10,8 @@ pipeline {
 				script {
 					readProp = readProperties file: 'readProp.properties'
 				}
-				echo "First name is ${readProp['FirstName']}"
-				echo "Last name is ${readProp['LastName']}"
+				echo "First name is ${readProp['first_name']}"
+				echo "Last name is ${readProp['last_name']}"
 			}
 		} 
 		stage('Clone zAppbuild') {

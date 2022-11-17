@@ -1,2 +1,2 @@
-FirstName=Jayesh
-LastName=Patel
+first_name=Jayesh
+last_name=Patel
