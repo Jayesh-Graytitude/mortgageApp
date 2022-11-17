@@ -8,16 +8,10 @@ pipeline {
 		stage('Clone Application Repo') {
 			steps {
 				script {
-					config = readProperties file: 'config.properties'
+					readProp = readProperties file: 'readProp.properties'
 				}
-				echo "First name is ${config['FirstName']}"
-				echo "Last name is ${config['LastName']}"
-//				echo "Jayesh - Clone Application Repo here"
-//			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
-//				echo "workspace directory is ${env.WORKSPACE}"
-//				echo "build URL is ${env.BUILD_URL}"
-//				JENKINS_WS = ${env.WORKSPACE}
-//				echo "Jenkins workspace is ${JENKINS_WS}"
+				echo "First name is ${readProp['FirstName']}"
+				echo "Last name is ${readProp['LastName']}"
 			}
 		} 
 		stage('Clone zAppbuild') {
