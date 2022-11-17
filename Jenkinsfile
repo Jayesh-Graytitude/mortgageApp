@@ -1,18 +1,16 @@
+def JENKINS_WS='Jayesh'
 pipeline {
 	agent {label 'sandbox'}
 	environment {
-        JENKINS_WS = 'Jayesh'
         ZAPPBUILD_WS = 'Patel'
     }
 	stages {
 		stage('Clone Application Repo') {
 			steps {
-				node {
-					def tesvar = readYaml file: "config.YAML"
-					echo "Test Variables: " + tesvar
+				script {
+					echo "The user is ${JENKINS_WS}"
+					JENKINS_WS = 'Diyanshu';
 				}
-//				echo "The user is ${env.JENKINS_WS}"
-//				JENKINS_WS = 'Diyanshu'
 //				echo "Jayesh - Clone Application Repo here"
 //			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
 //				echo "workspace directory is ${env.WORKSPACE}"
@@ -23,7 +21,7 @@ pipeline {
 		} 
 		stage('Clone zAppbuild') {
 			steps {
-				echo "The user is ${env.JENKINS_WS}"
+				echo "The user is ${JENKINS_WS}"
 				echo "Jayesh - clone zAppbuild here"
 			}
 		}
