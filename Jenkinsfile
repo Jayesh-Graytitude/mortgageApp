@@ -1,7 +1,7 @@
 def JENKINS_WS='Jayesh'
 pipeline {
-//	agent {label 'sandbox'}
-	agent {label 'built-in'}
+	agent {label 'sandbox'}
+//	agent {label 'built-in'}
 	environment {
         ZAPPBUILD_WS = 'Patel'
     }
