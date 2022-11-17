@@ -8,7 +8,7 @@ pipeline {
 		stage('Clone Application Repo') {
 			steps {
 				echo "The user is ${env.JENKINS_WS}"
-				env.JENKINS_WS = 'Diyanshu'
+				JENKINS_WS = 'Diyanshu'
 				echo "Jayesh - Clone Application Repo here"
 //			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
 //				echo "workspace directory is ${env.WORKSPACE}"
