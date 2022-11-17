@@ -6,6 +6,10 @@ pipeline {
     }
 	stages {
 		stage('Clone Application Repo') {
+			node {
+				def tesvar = readYaml file: "config.YAML"
+				echo "Test Variables: " + tesvar
+			}
 			steps {
 				echo "The user is ${env.JENKINS_WS}"
 //				JENKINS_WS = 'Diyanshu'
