@@ -8,8 +8,6 @@ pipeline {
 		stage('Clone Application Repo') {
 			steps {
 				script {
-					echo "The user is ${JENKINS_WS}"
-					JENKINS_WS = 'Diyanshu';
 					config = readProperties file: 'config.properties'
 				}
 				echo "First name is ${config['FirstName']}"
@@ -24,6 +22,10 @@ pipeline {
 		} 
 		stage('Clone zAppbuild') {
 			steps {
+				script {
+					echo "The user is ${JENKINS_WS}"
+					JENKINS_WS = 'Diyanshu';
+				}
 				echo "The user is ${JENKINS_WS}"
 				echo "Jayesh - clone zAppbuild here"
 			}
