@@ -7,6 +7,11 @@ pipeline {
 	stages {
 		stage('Clone Application Repo') {
 			steps {
+				script {
+					def props = readProperties file: 'extravar.properties'
+					env.USER = props.USER
+				}
+				echo "The user is $USER"
 				echo "Jayesh - Clone Application Repo here"
 //			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
 //				echo "workspace directory is ${env.WORKSPACE}"
