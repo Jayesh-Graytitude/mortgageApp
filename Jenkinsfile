@@ -10,7 +10,7 @@ pipeline {
 				script {
 					echo "The user is ${JENKINS_WS}"
 					JENKINS_WS = 'Diyanshu';
-					config = readProperties file: 'config.properties'
+					config = readProperties file: 'config'
 					echo "First name is ${config['FirstName']}"
 					echo "Last name is ${config['LastName']}"
 				}
