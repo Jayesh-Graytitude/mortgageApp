@@ -1,17 +1,14 @@
 pipeline {
 	agent {label 'sandbox'}
 	environment {
-        JENKINS_WS = ''
-        ZAPPBUILD_WS = ''
+        JENKINS_WS = 'Jayesh'
+        ZAPPBUILD_WS = 'Patel'
     }
 	stages {
 		stage('Clone Application Repo') {
 			steps {
-				script {
-					def props = readProperties file: 'extravar.properties'
-					env.USER = props.USER
-				}
-				echo "The user is $USER"
+				echo "The user is ${env.JENKINS_WS}"
+				env.JENKINS_WS = 'Diyanshu'
 				echo "Jayesh - Clone Application Repo here"
 //			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
 //				echo "workspace directory is ${env.WORKSPACE}"
@@ -22,6 +19,7 @@ pipeline {
 		} 
 		stage('Clone zAppbuild') {
 			steps {
+				echo "The user is ${env.JENKINS_WS}"
 				echo "Jayesh - clone zAppbuild here"
 			}
 		}
