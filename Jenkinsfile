@@ -11,9 +11,9 @@ pipeline {
 					echo "The user is ${JENKINS_WS}"
 					JENKINS_WS = 'Diyanshu';
 					config = readProperties file: 'config.properties'
-					echo "First name is ${config['FirstName']}"
-					echo "Last name is ${config['LastName']}"
 				}
+				echo "First name is ${config['FirstName']}"
+				echo "Last name is ${config['LastName']}"
 //				echo "Jayesh - Clone Application Repo here"
 //			    echo "Current Job Build number is ${env.BUILD_NUMBER}"
 //				echo "workspace directory is ${env.WORKSPACE}"
