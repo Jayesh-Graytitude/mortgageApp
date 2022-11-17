@@ -6,11 +6,11 @@ pipeline {
     }
 	stages {
 		stage('Clone Application Repo') {
-			node {
-				def tesvar = readYaml file: "config.YAML"
-				echo "Test Variables: " + tesvar
-			}
-//			steps {
+			steps {
+				node {
+					def tesvar = readYaml file: "config.YAML"
+					echo "Test Variables: " + tesvar
+				}
 //				echo "The user is ${env.JENKINS_WS}"
 //				JENKINS_WS = 'Diyanshu'
 //				echo "Jayesh - Clone Application Repo here"
@@ -19,7 +19,7 @@ pipeline {
 //				echo "build URL is ${env.BUILD_URL}"
 //				JENKINS_WS = ${env.WORKSPACE}
 //				echo "Jenkins workspace is ${JENKINS_WS}"
-//			}
+			}
 		} 
 		stage('Clone zAppbuild') {
 			steps {
