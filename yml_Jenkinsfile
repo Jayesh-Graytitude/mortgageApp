@@ -1,0 +1,17 @@
+def JENKINS_WS='Jayesh'
+pipeline {
+	agent {label 'sandbox'}
+	environment {
+        ZAPPBUILD_WS = 'Patel'
+    }
+	stages {
+		stage('Read YML File') {
+		    steps {
+			    script {
+			        def yamlContent = readFile('new.YAML')
+                    def yaml = readYaml(text: yamlContent)
+                    echo "Value from YAML: ${yaml.SIT}"
+			    }
+		    }
+		} 
+	}
