@@ -9,10 +9,13 @@ pipeline {
 		stage('Clone Application Repo') {
 			steps {
 				script {
-					readProp = readProperties file: 'readProp.properties'
+//					readProp = readProperties file: 'readProp.properties'
+					def yamlContent = readFile('config.YAML')
+					def yaml = readYaml(text: yamlContent)
+					echo "Value from YAML: ${yaml.key}"
 				}
-				echo "First name is ${readProp['first_name']}"
-				echo "Last name is ${readProp['last_name']}"
+//				echo "First name is ${readProp['first_name']}"
+//				echo "Last name is ${readProp['last_name']}"
 			}
 		} 
 		stage('Clone zAppbuild') {
