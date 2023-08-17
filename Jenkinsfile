@@ -12,7 +12,7 @@ pipeline {
 //					readProp = readProperties file: 'readProp.properties'
 					def yamlContent = readFile('config.YAML')
 					def yaml = readYaml(text: yamlContent)
-					echo "Value from YAML: ${yaml.key}"
+					echo "Value from YAML: ${yaml}"
 				}
 //				echo "First name is ${readProp['first_name']}"
 //				echo "Last name is ${readProp['last_name']}"
