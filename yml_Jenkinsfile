@@ -8,7 +8,8 @@ pipeline {
 		stage('Read YML File') {
 		    steps {
 			    script {
-			        def yamlContent = readFile('config.YAML')
+//			        def yamlContent = readFile('config.YAML')
+			        def yamlContent = readFile('/u/adcdmst/tmp/new1.YAML')
                     		def yaml = readYaml(text: yamlContent)
                     		echo "Value from YAML: ${yaml.SIT}"
 			    }
